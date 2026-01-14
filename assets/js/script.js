@@ -115,3 +115,16 @@ window.addEventListener("scroll", function () {
       tabContent.innerHTML = tabData[button.textContent.trim()];
     });
   });
+
+  // navbar
+
+  document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const parent = toggle.closest(".has-dropdown");
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+
+      toggle.setAttribute("aria-expanded", !expanded);
+      parent.classList.toggle("active");
+    });
+  });
+
