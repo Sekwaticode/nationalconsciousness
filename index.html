@@ -293,65 +293,94 @@
   <h2 class="h2 section-title">
     Together We <strong>Build a Conscious Nation</strong>
   </h2>
+    <ul class="service-list">
 
-  <ul class="tab-nav">
-    <li>
-      <button class="tab-btn active">Our Mission</button>
-    </li>
-    <li>
-      <button class="tab-btn">Our Vision</button>
-    </li>
-    <li>
-      <button class="tab-btn">Our Values</button>
-    </li>
-  </ul>
-
-  <div class="tab-content">
-    <!-- Default content shown on load (Mission) -->
-    <p class="section-text">
-      To unite the people of South Africa through national consciousness — fostering unity, empowerment,
-      and transformation through education, culture, and civic engagement.
-    </p>
-
-    <ul class="tab-list">
-      <li class="tab-item">
-        <div class="item-icon">
-          <ion-icon name="people-circle-outline"></ion-icon>
+      <li>
+        <div class="service-card">
+          <div class="card-icon">
+            <ion-icon name="rocket-outline"></ion-icon>
+          </div>
+          <h3 class="h3 card-title">Mission</h3>
+          <p class="card-text">
+To unite people of South Africa through national consciousness - fotering unity, empowerment, and transformation through education, culture, and civic engagement        </p>
+        
+    <button class="btn btn-primary" data-modal="mission-modal">
+      <span>Read More</span>
+    </button>
         </div>
-        <p class="tab-text">Community Upliftment</p>
       </li>
 
-      <li class="tab-item">
-        <div class="item-icon">
-          <ion-icon name="school-outline"></ion-icon>
+         <li>
+        <div class="service-card">
+          <div class="card-icon">
+            <ion-icon name="eye-outline"></ion-icon>
+          </div>
+          <h3 class="h3 card-title">Our Vision</h3>
+          <p class="card-text">
+To build a united and conscious nation where all people, regardless of race, gender, or background, contribute to positive transformation and sustainable growth         </p>
+        <button class="btn btn-primary" data-modal="vision-modal">
+      <span>Read More</span>
+    </button>
         </div>
-        <p class="tab-text">Education & Youth Empowerment</p>
+      </li>
+         <li>
+        <div class="service-card">
+          <div class="card-icon">
+            <ion-icon name="telescope-outline"></ion-icon>
+          </div>
+          <h3 class="h3 card-title">Our Values</h3>
+          <p class="card-text">
+Shared identity, responsibility, and the power we hold when we act together          </p>
+        <button class="btn btn-primary" data-modal="values-modal">
+      <span>Read More</span>
+    </button>
+        </div>
       </li>
 
-      <li class="tab-item">
-        <div class="item-icon">
-          <ion-icon name="female-outline"></ion-icon>
-        </div>
-        <p class="tab-text">Gender Equality & Inclusion</p>
-      </li>
-
-      <li class="tab-item">
-        <div class="item-icon">
-          <ion-icon name="megaphone-outline"></ion-icon>
-        </div>
-        <p class="tab-text">Civic Action & Advocacy</p>
-      </li>
-    </ul>
+</ul>
 
    
   </div>
 </div>
 
+<!-- MODAL OVERLAY -->
+<div class="modal-overlay" data-overlay></div>
+
+<!-- Mission Modal -->
+<div class="modal" id="mission-modal">
+  <button class="modal-close" aria-label="Close">&times;</button>
+  <h3>Our Mission</h3>
+  <p>
+    Our mission is to unite the people of South Africa through national
+    consciousness, fostering unity, empowerment, and transformation through
+    education, culture, and civic engagement. We aim to inspire active
+    participation in building a just and inclusive society.
+  </p>
+</div>
+
+<!-- Vision Modal -->
+<div class="modal" id="vision-modal">
+  <button class="modal-close" aria-label="Close">&times;</button>
+  <h3>Our Vision</h3>
+  <p>
+    We envision a united and conscious nation where all people, regardless of
+    race, gender, or background, actively contribute to positive transformation,
+    equality, and sustainable growth for future generations.
+  </p>
+</div>
+
+<!-- Values Modal -->
+<div class="modal" id="values-modal">
+  <button class="modal-close" aria-label="Close">&times;</button>
+  <h3>Our Values</h3>
+  <p>
+    Our values are rooted in shared identity, collective responsibility,
+    integrity, inclusivity, and the power of unity. We believe meaningful change
+    happens when communities act together with purpose and compassion.
+  </p>
+</div>
 
 
-          </div>
-
-        </div>
       </section>
 
       <!-- 

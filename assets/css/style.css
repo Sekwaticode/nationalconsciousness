@@ -1921,3 +1921,213 @@ body {
 .contact-form button:hover {
   background-color: #db730b;
 }
+
+/* cards */
+
+.cardscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.cardscontainer .cards {
+    position: relative;
+    width: 350px;
+    height: 520px;
+    background: #ccc;
+    margin: 20px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.cardscontainer .cards::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.cardscontainer .cards .icon {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardscontainer .cards .icon img {
+    filter: invert(1);
+    max-width: 120px;
+}
+
+.cardscontainer .cards .icon::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #ccc;
+}
+
+.cardscontainer .cards .icon::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #333;
+    border-bottom-left-radius: 80px;
+}
+
+.cardscontainer .cards:nth-child(1) .icon,
+.cardscontainer .cards:nth-child(1) .icon::after,
+.cardscontainer .cards:nth-child(1) .content::before,
+.cardscontainer .cards:nth-child(1) .content .text a {
+    background: #b61774;
+
+
+}
+
+.cardscontainer .cards:nth-child(2) .icon,
+.cardscontainer .cards:nth-child(2) .icon::after,
+.cardscontainer .cards:nth-child(2) .content::before,
+.cardscontainer .cards:nth-child(2) .content .text a {
+    background: #66023C;
+
+}
+
+.cardscontainer .cards:nth-child(3) .icon,
+.cardscontainer .cards:nth-child(3) .icon::after,
+.cardscontainer .cards:nth-child(3) .content::before,
+.cardscontainer .cards:nth-child(3) .content .text a {
+
+    background: #30011c;
+}
+
+
+.cardscontainer .cards .content {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cardscontainer .cards .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #333;
+
+}
+
+.cardscontainer .cards .content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #ccc;
+    border-top-right-radius: 80px;
+}
+
+
+.cardscontainer .cards .content .text {
+    z-index: 1;
+    text-align: center;
+    padding: 20px 30px;
+    z-index: 1;
+}
+
+.cardscontainer .cards .content .text h2 {
+    font-weight: 500;
+    font-size: 1.7em;
+    color: #333;
+}
+
+.cardscontainer .cards .content .text p {
+    font-weight: 400;
+    color: #333;
+    margin: 10px 0;
+}
+
+.cardscontainer .cards .content .text a {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #333;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+/* MODAL BOX */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: min(90%, 500px);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  transform: translate(-50%, -50%) scale(0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+/* Active states */
+.modal.active,
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Modal headings */
+.modal h3 {
+  margin-bottom: 1rem;
+}

@@ -128,3 +128,23 @@ window.addEventListener("scroll", function () {
     });
   });
 
+  const modalButtons = document.querySelectorAll("[data-modal]");
+  const modals = document.querySelectorAll(".modal");
+  const overlay = document.querySelector("[data-overlay]");
+  const closeButtons = document.querySelectorAll(".modal-close");
+
+  modalButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const modal = document.getElementById(btn.dataset.modal);
+      modal.classList.add("active");
+      overlay.classList.add("active");
+    });
+  });
+
+  function closeModal() {
+    modals.forEach(modal => modal.classList.remove("active"));
+    overlay.classList.remove("active");
+  }
+
+  overlay.addEventListener("click", closeModal);
+  closeButtons.forEach(btn => btn.addEventListener("click", closeModal));
