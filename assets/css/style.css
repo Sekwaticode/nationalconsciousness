@@ -232,17 +232,17 @@ h6 {
 
 .h1 {
   font-size: var(--fs-2);
-  color: var(--primary-blue);
+  color: var(--eerie-black-1);
 }
 
 .h2 {
   font-size: var(--fs-3);
-  color: var(--primary-blue);
+  color: var(--eerie-black-1);
 }
 
 .h3 {
   font-size: var(--fs-5);
-  color: var(--primary-blue);
+  color: var(--eerie-black-1);
 }
 
 .h4 {
@@ -325,6 +325,7 @@ h6 {
   height: 100%;
   object-fit: cover;
 }
+
 
 
 
@@ -800,10 +801,6 @@ header {
 
 
 
-
-
-
-
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
@@ -859,7 +856,7 @@ header {
   font-size: var(--fs-2);
   margin-block: 30px;
   line-height: 1.2;
-  color: var(--primary-blue);
+  color: var(--eerie-black-1);
   font-weight: var(--fw-700);
 }
 
@@ -1071,7 +1068,7 @@ header {
 \*-----------------------------------*/
 
 .cta-content {
-  background-color: var(--primary-blue);
+  background-color: var(--green);
   text-align: center;
   padding: 50px 15px;
   margin-block-end: 30px;

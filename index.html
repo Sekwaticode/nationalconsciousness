@@ -31,19 +31,15 @@
 
 <body>
 
-  <!-- 
+<!-- 
     - #HEADER
   -->
 
 <header>
-    <div class="container">
+    <div class="container header-container">
       <input type="checkbox" name="check" id="check">
       <div class="logo-container">
-        <ul>
-        <h3 class="logo">National </h3>
-        <h3 class="logo"> Consciousness
-          <h3 class="logo"> Foundation</h3>
-          </ul>
+        <h3 class="logo">National Consciousness Foundation</h3>
       </div>
 
       <div class="nav-btn">
@@ -53,45 +49,48 @@
               <a href="#">Home</a>
             </li>
             <li class="nav-link" style="--i: .85s">
-              <a href="#">About<i class="fas fa-caret-down"></i></a>
+              <a href="#about">About<i class="fas fa-caret-down"></i></a>
               
             </li>
              <li class="nav-link" style="--i: .85s">
-              <a href="#">Visionary<i class="fas fa-caret-down"></i></a>
+              <a href="#visionary">Visionary<i class="fas fa-caret-down"></i></a>
               
             </li>
             <li class="nav-link" style="--i: 1.1s">
-              <a href="#">Programmes<i class="fas fa-caret-down"></i></a>
+              <a href="#programmes">Programmes<i class="fas fa-caret-down"></i></a>
               <div class="dropdown">
                 <ul>
                   <li class="dropdown-link">
-                    <a href="#">Community Development, Social Upliftment Programmes & National Dialogue</a>
-                  </li>
-                  <li class="dropdown-link">
-                    <a href="#">Civil Advocacy & Policy Reform</a>
-                  </li>
-                  <li class="dropdown-link">
-                    <a href="#">Arts, Culture & Creative Expression<i class="fas fa-caret-down"></i></a>
+                    <a href="#community_programmes">Community Development, Social Upliftment Programmes & National Dialogue
                     
+                    </a>
                   </li>
-                  
+                  <li class="dropdown-link">
+                    <a href="#civil_advocacy">Civil Advocacy & Policy Reform
+                    
+                    </a>
+                  </li>
+                  <li class="dropdown-link">
+                    <a href="#arts_culture">Arts, Culture & Creative Expression 
+                  </li>
+                
                   <div class="arrow"></div>
                 </ul>
               </div>
             </li>
             <li class="nav-link" style="--i: 1.35s">
-              <a href="#">Contact</a>
+              <a href="#contact_details">Contact</a>
             </li>
           </ul>
         </div>
        
       </div>
 
-      <div class="hamburger-menu-container">
+      <label for="check" class="hamburger-menu-container">
         <div class="hamburger-menu">
           <div></div>
         </div>
-      </div>
+      </label>
     </div>
   </header>
   <main>
@@ -104,6 +103,7 @@
 
   <main>
     <article>
+
 
 <!-- 
   - #HERO
@@ -123,11 +123,12 @@
       Together, we build a conscious, united nation where every South African contributes to positive transformation,
       equality, and sustainable growth.
     </p>
-
+<a href="#contact_details">
     <button class="btn btn-primary">
       <span>Join the Movement</span>
       <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
     </button>
+    </a>
 </div>
 <img src="assets/images/NCF_logo_image (500 x 500 px).svg">
   </div>
@@ -139,7 +140,7 @@
   - #FEATURES
 -->
 
-<section class="section features">
+<section class="section features" >
   <div class="container">
 
     <ul class="features-list">
@@ -217,7 +218,6 @@
 
           <div class="about-banner">
 
-            <!-- <h2 class="deco-title">About Us</h2> -->
 
             <!-- <img src="./assets/images/deco-img.png" width="58" height="261" alt="" class="deco-img"> -->
 
@@ -345,16 +345,16 @@ Shared identity, responsibility, and the power we hold when we act together     
 
 
 <section class="section service" id="service" style="background-image: url('./assets/images/service-map.png')">
-  <div class="container">
+  <div class="about-content">
 
-    <p class="section-subtitle">
-        <span>Our Objectives</span>
-    </p>
+ 
 
-    <h2 class="h2 section-title">
-      Working together to build a conscious and united nation
+    <h2 class="h2 section-title">Our Objectives 
     </h2>
-
+   <p class="card-text">
+        <span> Working together to build a conscious and united nation
+</span>
+    </p>
     <ul class="service-list">
 
       <!-- 1. Promote National Consciousness -->
@@ -454,7 +454,7 @@ Shared identity, responsibility, and the power we hold when we act together     
         - #TESTIMONIALS
       -->
 
-      <section class="testi">
+      <section class="testi" id="visionary">
 
         <div class="testi-content">
 
@@ -498,7 +498,7 @@ Shared identity, responsibility, and the power we hold when we act together     
       </section>
 
 
-<section class="section event" id="event">
+<section class="section event" id="programmes">
   <div class="container">
 <h2 class="h2 section-title">Event & Programmes 
     </h2>
@@ -517,7 +517,7 @@ Shared identity, responsibility, and the power we hold when we act together     
           <div class="wrapper">
 
             <div class="tab-content">
-              <p class="h3 section-title">
+              <p class="h3 section-title" id="community_programmes">
                 Community Development, Social Upliftment Programmes &amp; National Dialogue
               </p>
 
@@ -545,7 +545,7 @@ Shared identity, responsibility, and the power we hold when we act together     
           <div class="wrapper">
 
             <div class="tab-content">
-              <p class="h3 section-title">
+              <p class="h3 section-title" id="civil_advocacy">
                 Civil Advocacy &amp; Policy Reform
               </p>
 
@@ -575,7 +575,7 @@ Shared identity, responsibility, and the power we hold when we act together     
           <div class="wrapper">
 
             <div class="tab-content">
-              <p class="h3 section-title">
+              <p class="h3 section-title" id="arts_culture">
                 Arts, Culture &amp; Creative Expression
               </p>
 
@@ -605,7 +605,7 @@ Shared identity, responsibility, and the power we hold when we act together     
         - #CTA
       -->
 
-      <section class="section cta">
+      <section class="section cta" id="contact">
         <div class="container">
 
           <div class="cta-content">
@@ -613,12 +613,13 @@ Shared identity, responsibility, and the power we hold when we act together     
 <h3 class="cta-h3">
   The National Consciousness Foundation (NCF) has touched countless lives across South Africa by empowering communities, promoting education, and creating opportunities for growth. Through its community upliftment projects, youth mentorship programs, and cultural initiatives, NCF continues to inspire hope, strengthen social bonds, and drive sustainable change in every province it reaches.
 </h3>
-
+<a href="#contact_details">
             <button class="btn btn-outline">
               <span>Get Involved</span>
 
               <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
             </button>
+            </a>
           </div>
 
           <figure class="cta-banner">
@@ -650,7 +651,7 @@ Shared identity, responsibility, and the power we hold when we act together     
           <!-- Left Image Section -->
           <div class="contact-image">
             <img
-              src="./assets/images/NCF_logo_image (500 x 500 px).png"
+              src="./assets/images/NCF_logo_image (500 x 500 px).svg"
               alt="National Consciousness Foundation"
             />
           </div>
@@ -740,7 +741,7 @@ Shared identity, responsibility, and the power we hold when we act together     
 
 
 
-  <ul class="features-list">
+  <ul class="features-list" id="contact_details">
 
   <li class="features-item">
     <div class="item-icon">
