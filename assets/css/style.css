@@ -36,7 +36,7 @@
   --pistachio_50: hsla(85, 56%, 64%, 0.5);
   --baby-powder: hsl(86, 41%, 97%);
   --light-gray: hsl(0, 0%, 80%);
-  --pistachio: #9ACD32;
+  --pistachio: #d5b456;
   --platinum: hsl(0, 0%, 91%);
   --cultured: hsl(0, 0%, 94%);
   --white-60: hsla(0, 0%, 100%, 0.6);
@@ -206,7 +206,7 @@ body {
 }
 
 .section-subtitle {
-  color: var(--color, var(--green));
+  color: var(--color, var(--eerie-black-1));
   font-size: var(--fs, var(--fs-8));
   font-family: var(--ff, var(--ff-roboto));
   font-weight: var(--fw-700);
@@ -817,7 +817,7 @@ header {
   align-items: center;
   padding-block: 200px 325px;
   background-position: center;
-  background-image: url("../images/Untitled\ \(500\ x\ 250\ px\)\ \(250\ x\ 250\ px\)\ \(500\ x\ 250\ px\).svg");
+  background-image: none;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -913,7 +913,7 @@ header {
 
 .features {
   padding-block-start: 0;
-  background-color: #9ACD32 !important;
+  background-color: #d5b456 !important;
 }
 
 .features-list {
@@ -939,7 +939,7 @@ header {
 
 .features-item .item-title {
   margin-block-end: 10px;
-  color: var(--primary-blue);
+  color: var(--eerie-black-1);
   font-weight: var(--fw-700);
 }
 
@@ -1711,7 +1711,7 @@ header {
   
   /* Ensure features has solid background on all screen sizes */
   .features {
-    background-color: #9ACD32 !important;
+    background-color: #d5b456 !important;
   }
 
 
@@ -1843,6 +1843,21 @@ header {
   /**
    * HERO
    */
+.flex-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* keeps text on the left */
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .flex-hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+  }
+}
 
 
 
@@ -1852,7 +1867,7 @@ header {
 
   .features {
     padding-block-start: var(--section-padding);
-    background-color: #9ACD32 !important;
+    background-color: #d5b456 !important;
   }
 
   .features-list {
@@ -2097,7 +2112,7 @@ header {
   .features {
     padding-block-start: 0;
     margin-block-start: -185px;
-    background-color: #9ACD32 !important;
+    background-color: #d5b456 !important;
   }
 
 
