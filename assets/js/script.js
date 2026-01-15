@@ -212,3 +212,33 @@ document.addEventListener('keydown', (e) => {
     closeModal();
   }
 });
+
+/**
+ * Smooth scroll to contact section when clicking nav links
+ */
+document.querySelectorAll('a[href="#contact-section"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.getElementById('contact-section');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close mobile menu if open
+      const check = document.getElementById('check');
+      if (check) {
+        check.checked = false;
+      }
+    }
+  });
+});
+
+document.querySelectorAll('.nav-link > a').forEach(link => {
+  link.addEventListener('click', e => {
+    const parent = link.parentElement;
+    const dropdown = parent.querySelector('.dropdown');
+
+    if (dropdown) {
+      e.preventDefault();
+      parent.classList.toggle('active');
+    }
+  });
+});
