@@ -1,52 +1,73 @@
 'use strict';
 
-  // search-box open close js code
-let navbar = document.querySelector(".navbar");
-let searchBox = document.querySelector(".search-box .bx-search");
-// let searchBoxCancel = document.querySelector(".search-box .bx-x");
+/* =========================
+   SEARCH BOX TOGGLE
+========================= */
+const navbar = document.querySelector(".navbar");
+const searchBox = document.querySelector(".search-box .bx-search");
 
-searchBox.addEventListener("click", ()=>{
-  navbar.classList.toggle("showInput");
-  if(navbar.classList.contains("showInput")){
-    searchBox.classList.replace("bx-search" ,"bx-x");
-  }else {
-    searchBox.classList.replace("bx-x" ,"bx-search");
-  }
-});
+if (navbar && searchBox) {
+  searchBox.addEventListener("click", () => {
+    navbar.classList.toggle("showInput");
 
-// sidebar open close js code
-let navLinks = document.querySelector(".nav-links");
-let menuOpenBtn = document.querySelector(".navbar .bx-menu");
-let menuCloseBtn = document.querySelector(".nav-links .bx-x");
-menuOpenBtn.onclick = function() {
-navLinks.style.left = "0";
-}
-menuCloseBtn.onclick = function() {
-navLinks.style.left = "-100%";
+    if (navbar.classList.contains("showInput")) {
+      searchBox.classList.replace("bx-search", "bx-x");
+    } else {
+      searchBox.classList.replace("bx-x", "bx-search");
+    }
+  });
 }
 
+/* =========================
+   SIDEBAR OPEN / CLOSE
+========================= */
+const navLinks = document.querySelector(".nav-links");
+const menuOpenBtn = document.querySelector(".navbar .bx-menu");
+const menuCloseBtn = document.querySelector(".nav-links .bx-x");
 
-// sidebar submenu open close js code
-let htmlcssArrow = document.querySelector(".htmlcss-arrow");
-htmlcssArrow.onclick = function() {
- navLinks.classList.toggle("show1");
-}
-let moreArrow = document.querySelector(".more-arrow");
-moreArrow.onclick = function() {
- navLinks.classList.toggle("show2");
-}
-let jsArrow = document.querySelector(".js-arrow");
-jsArrow.onclick = function() {
- navLinks.classList.toggle("show3");
+if (menuOpenBtn && navLinks) {
+  menuOpenBtn.addEventListener("click", () => {
+    navLinks.style.left = "0";
+  });
 }
 
-/**
- * Tab functionality
- */
+if (menuCloseBtn && navLinks) {
+  menuCloseBtn.addEventListener("click", () => {
+    navLinks.style.left = "-100%";
+  });
+}
+
+/* =========================
+   SIDEBAR SUBMENUS
+========================= */
+const htmlcssArrow = document.querySelector(".htmlcss-arrow");
+const moreArrow = document.querySelector(".more-arrow");
+const jsArrow = document.querySelector(".js-arrow");
+
+if (htmlcssArrow && navLinks) {
+  htmlcssArrow.addEventListener("click", () => {
+    navLinks.classList.toggle("show1");
+  });
+}
+
+if (moreArrow && navLinks) {
+  moreArrow.addEventListener("click", () => {
+    navLinks.classList.toggle("show2");
+  });
+}
+
+if (jsArrow && navLinks) {
+  jsArrow.addEventListener("click", () => {
+    navLinks.classList.toggle("show3");
+  });
+}
+
+/* =========================
+   TAB FUNCTIONALITY
+========================= */
 const tabButtons = document.querySelectorAll('.tab-btn');
 const tabContent = document.querySelector('.tab-content');
 
-// Create content for each tab (you can customize this text)
 const tabData = {
   "Our Mission": `
     <p class="section-text">
@@ -78,59 +99,42 @@ const tabData = {
       and the power we hold when we act together. Through education, creativity, and solidarity, we aim to inspire 
       active citizenship and collective progress across our nation.
     </p>
-
     <ul class="tab-list">
-      <li class="tab-item">
-        <div class="item-icon"><ion-icon name="musical-notes-outline"></ion-icon></div>
-        <p class="tab-text">Cultural and Creative Expression</p>
-      </li>
-      <li class="tab-item">
-        <div class="item-icon"><ion-icon name="people-outline"></ion-icon></div>
-        <p class="tab-text">Unity and Social Solidarity</p>
-      </li>
-      <li class="tab-item">
-        <div class="item-icon"><ion-icon name="school-outline"></ion-icon></div>
-        <p class="tab-text">Education and Conscious Awareness</p>
-      </li>
-      <li class="tab-item">
-        <div class="item-icon"><ion-icon name="earth-outline"></ion-icon></div>
-        <p class="tab-text">Active Citizenship and Transformation</p>
-      </li>
+      <li class="tab-item"><div class="item-icon"><ion-icon name="musical-notes-outline"></ion-icon></div><p class="tab-text">Cultural and Creative Expression</p></li>
+      <li class="tab-item"><div class="item-icon"><ion-icon name="people-outline"></ion-icon></div><p class="tab-text">Unity and Social Solidarity</p></li>
+      <li class="tab-item"><div class="item-icon"><ion-icon name="school-outline"></ion-icon></div><p class="tab-text">Education and Conscious Awareness</p></li>
+      <li class="tab-item"><div class="item-icon"><ion-icon name="earth-outline"></ion-icon></div><p class="tab-text">Active Citizenship and Transformation</p></li>
     </ul>
   `
 };
 
-// Add click event listeners for tabs
-if (tabButtons.length > 0 && tabContent) {
+if (tabButtons.length && tabContent) {
   tabButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Remove 'active' class from all buttons
       tabButtons.forEach(btn => btn.classList.remove('active'));
-      // Add 'active' class to the clicked button
       button.classList.add('active');
-      // Update tab content
       tabContent.innerHTML = tabData[button.textContent.trim()];
     });
   });
 }
 
-/**
- * Dropdown toggle for mobile
- */
+/* =========================
+   MOBILE DROPDOWNS
+========================= */
 document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
   toggle.addEventListener("click", () => {
     const parent = toggle.closest(".has-dropdown");
-    if (parent) {
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !expanded);
-      parent.classList.toggle("active");
-    }
+    if (!parent) return;
+
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    parent.classList.toggle("active");
   });
 });
 
-/**
- * Modal functionality
- */
+/* =========================
+   MODAL FUNCTIONALITY
+========================= */
 const modalButtons = document.querySelectorAll("[data-modal]");
 const modals = document.querySelectorAll(".modal");
 const overlay = document.querySelector("[data-overlay]");
@@ -139,18 +143,16 @@ const closeButtons = document.querySelectorAll(".modal-close");
 modalButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     const modal = document.getElementById(btn.dataset.modal);
-    if (modal && overlay) {
-      modal.classList.add("active");
-      overlay.classList.add("active");
-    }
+    if (!modal || !overlay) return;
+
+    modal.classList.add("active");
+    overlay.classList.add("active");
   });
 });
 
 function closeModal() {
   modals.forEach(modal => modal.classList.remove("active"));
-  if (overlay) {
-    overlay.classList.remove("active");
-  }
+  if (overlay) overlay.classList.remove("active");
 }
 
 if (overlay) {
@@ -159,35 +161,34 @@ if (overlay) {
 
 closeButtons.forEach(btn => btn.addEventListener("click", closeModal));
 
-// Close modal on Escape key
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closeModal();
-  }
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
 });
 
-/**
- * Smooth scroll to contact section when clicking nav links
- */
+/* =========================
+   SMOOTH SCROLL (CONTACT)
+========================= */
 document.querySelectorAll('a[href="#contact-section"]').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener("click", e => {
     e.preventDefault();
-    const target = document.getElementById('contact-section');
+    const target = document.getElementById("contact-section");
+
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // Close mobile menu if open
-      const check = document.getElementById('check');
-      if (check) {
-        check.checked = false;
-      }
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
+
+    const check = document.getElementById("check");
+    if (check) check.checked = false;
   });
 });
 
+/* =========================
+   NAV DROPDOWN LINK TOGGLE
+========================= */
 document.querySelectorAll('.nav-link > a').forEach(link => {
   link.addEventListener('click', e => {
     const parent = link.parentElement;
-    const dropdown = parent.querySelector('.dropdown');
+    const dropdown = parent?.querySelector('.dropdown');
 
     if (dropdown) {
       e.preventDefault();
