@@ -1,90 +1,43 @@
 'use strict';
 
-/**
- * Hamburger Menu Toggle
- * Using the checkbox approach for proper open/close functionality
- */
+  // search-box open close js code
+let navbar = document.querySelector(".navbar");
+let searchBox = document.querySelector(".search-box .bx-search");
+// let searchBoxCancel = document.querySelector(".search-box .bx-x");
 
-// The hamburger menu is now controlled by the #check checkbox
-// The label wraps the hamburger-menu-container and toggles the checkbox
-// CSS handles the visual state changes based on :checked state
-
-/**
- * navbar toggle (for legacy data attributes if present)
- */
-
-const navOpenBtn = document.querySelector("[data-nav-open-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const navCloseBtn = document.querySelector("[data-nav-close-btn]");
-
-if (navOpenBtn && navbar && navCloseBtn) {
-  const navElemArr = [navOpenBtn, navCloseBtn];
-
-  for (let i = 0; i < navElemArr.length; i++) {
-    navElemArr[i].addEventListener("click", function () {
-      navbar.classList.toggle("active");
-    });
+searchBox.addEventListener("click", ()=>{
+  navbar.classList.toggle("showInput");
+  if(navbar.classList.contains("showInput")){
+    searchBox.classList.replace("bx-search" ,"bx-x");
+  }else {
+    searchBox.classList.replace("bx-x" ,"bx-search");
   }
-}
-
-/**
- * toggle navbar when click any navbar link
- */
-
-const navbarLinks = document.querySelectorAll("[data-nav-link]");
-
-for (let i = 0; i < navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", function () {
-    if (navbar) {
-      navbar.classList.remove("active");
-    }
-    // Also uncheck the hamburger checkbox
-    const check = document.getElementById('check');
-    if (check) {
-      check.checked = false;
-    }
-  });
-}
-
-/**
- * Close mobile menu when clicking a nav link
- */
-const allNavLinks = document.querySelectorAll('.nav-link > a');
-allNavLinks.forEach(link => {
-  link.addEventListener('click', function(e) {
-    // Don't close if it's a dropdown parent (has dropdown child)
-    const parent = this.closest('.nav-link');
-    const hasDropdown = parent && parent.querySelector('.dropdown');
-    
-    // On mobile, if there's a dropdown, don't close the menu
-    if (window.innerWidth <= 920 && hasDropdown) {
-      return;
-    }
-    
-    // Close the menu by unchecking the checkbox
-    const check = document.getElementById('check');
-    if (check && window.innerWidth <= 920) {
-      // Only close if clicking on a link without dropdown
-      if (!hasDropdown) {
-        setTimeout(() => {
-          check.checked = false;
-        }, 150);
-      }
-    }
-  });
 });
 
-/**
- * header active when window scrolled down
- */
+// sidebar open close js code
+let navLinks = document.querySelector(".nav-links");
+let menuOpenBtn = document.querySelector(".navbar .bx-menu");
+let menuCloseBtn = document.querySelector(".nav-links .bx-x");
+menuOpenBtn.onclick = function() {
+navLinks.style.left = "0";
+}
+menuCloseBtn.onclick = function() {
+navLinks.style.left = "-100%";
+}
 
-const header = document.querySelector("[data-header]");
 
-if (header) {
-  window.addEventListener("scroll", function () {
-    window.scrollY >= 50 ? header.classList.add("active")
-      : header.classList.remove("active");
-  });
+// sidebar submenu open close js code
+let htmlcssArrow = document.querySelector(".htmlcss-arrow");
+htmlcssArrow.onclick = function() {
+ navLinks.classList.toggle("show1");
+}
+let moreArrow = document.querySelector(".more-arrow");
+moreArrow.onclick = function() {
+ navLinks.classList.toggle("show2");
+}
+let jsArrow = document.querySelector(".js-arrow");
+jsArrow.onclick = function() {
+ navLinks.classList.toggle("show3");
 }
 
 /**
