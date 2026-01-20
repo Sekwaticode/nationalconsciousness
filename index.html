@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <!-- 
     - google font link
@@ -35,15 +36,15 @@
     - #HEADER
   -->
 <nav>
-  <div class="navbar flex items-center px-6">
+  <div class="navbar">
     
     <!-- Hamburger -->
-    <i class="bx bx-menu text-2xl cursor-pointer"></i>
+    <i class="bx bx-menu"></i>
 
     <!-- Logo -->
-    <div class="logo ml-4 mr-auto">
+    <div class="logo">
       <a href="#">
-        <h3 class="logo whitespace-nowrap">
+        <h3 class="logo-text">
           National Consciousness Foundation
         </h3>
       </a>
@@ -83,33 +84,34 @@
   <main>
     <article>
 
-
-<!-- 
-  - #HERO
--->
-
-<section class="hero" id="home">
-    <div class="flex-hero">
-
-  <div class="container">
-    <h2 class="h1 hero-title">
+<section class="creative-hero--section">
+        <div class="hero-section--bg">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+<h2 class="h1 hero-title">
       Inspiring <strong>Unity and Change</strong> Across South Africa
-    </h2>
-
-    <p class="hero-text">
+    </h2>                   
+  <p class="hero-text">
       Together, we build a conscious, united nation where every South African contributes to positive transformation,
       equality, and sustainable growth.
-    </p>
-<a href="#contact-section">
-    <!-- <button class="btn btn-primary">
-      <span>Join the Movement</span>
-      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
-    </button> -->
-    </a>
-</div>
-<img src="assets/images/NCFlogo_hero (790 x 291 px).png">
-  </div>
-</section>
+    </p>                    <div class="creative-cta--wrap">
+                        <div class="creative-rating">
+                       
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="media-wrapper">
+            <img src="assets/images/NCF_logo_image (500 x 500 px).svg">
+            
+        </div>
+        </div>
+    </section>
+
 
 <!-- 
   - #FEATURES
@@ -885,63 +887,27 @@ Shared identity, responsibility, and the power we hold when we act together     
 </section>
 
 
-      <!-- 
-        - #INSTA POST
-      -->
-
-      <section class="insta-post">
-
-        <ul class="insta-post-list">
-
-          <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
-              <img src="./assets/images/insta1.png" width="320" height="300" loading="lazy" alt="Lion"
-                class="img-cover">
-
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
-              <img src="./assets/images/insta2.png" width="320" height="300" loading="lazy" alt="Deer"
-                class="img-cover">
-
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
-              <img src="./assets/images/insta3.png" width="320" height="300" loading="lazy" alt="Wild Bear"
-                class="img-cover">
-
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
-              <img src="./assets/images/insta4.png" width="320" height="300" loading="lazy" alt="Deer"
-                class="img-cover">
-
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="insta-post-item">
-            <a href="#" class="insta-post-link">
-              <img src="./assets/images/insta5.png" width="320" height="300" loading="lazy" alt="Horses"
-                class="img-cover">
-
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
       </section>
-
+ <div class="slider-container">
+        <div class="slider" reverse="true" style="
+            --width: 180px;
+            --height: 180px;
+            --quantity: 10;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="assets/images/insta1.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="assets/images/insta2.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="assets/images/insta3.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="assets/images/insta4.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="assets/images/insta5.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="assets/images/insta1.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="assets/images/insta2.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="assets/images/insta3.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="assets/images/insta4.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="assets/images/insta5.png" alt=""></div>
+            </div>
+        </div>
+    </div>
     </article>
   </main>
 
