@@ -2957,6 +2957,22 @@ footer .container .sci li a i {
   font-size: 18px;
 }
 
+/* Image footer section */
+footer .container .imageBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ aligns image with other sections */
+}
+
+footer .container .imageBox img {
+  max-width: 120px; /* adjust as needed */
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  display: block; /* ✅ removes inline spacing issues */
+}
+
+
 /* Quick links */
 footer .container .quickLinks ul {
   list-style: none;
