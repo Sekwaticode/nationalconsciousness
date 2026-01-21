@@ -2161,6 +2161,7 @@ nav .navbar .links li:hover .js-sub-menu {
 .contact-image {
   position: relative;
   min-height: 400px;
+  filter: grayscale();
 }
 
 .contact-image img {
